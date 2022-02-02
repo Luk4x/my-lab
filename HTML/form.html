@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Maciel Francisco (Luk4x)">
+    <link rel="shortcut icon" href="../assets/faviconluk4x.ico" type="image/x-icon">
+    <title>Tag Form</title>
+</head>
+<body>
+    <form action="POST" enctype="multipart/form-data">
+        <label>
+            Email:
+            <input type="email" autocomplete="email" value="exemplo@email.com" placeholder="Digite seu email.." autofocus>
+        </label>
+        <label>
+            Senha:
+            <input type="password">
+        </label>
+        <label>
+            Escolha um video:
+            <input type="file" accept="video/*">
+        </label>
+        <label>
+            Escolha uma cor:
+            <input type="color" value="#fff333">
+        </label>
+        <label>
+            Range:
+            <input type="range" min="-6" max="10" value="2" step="0.2">
+        </label>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
