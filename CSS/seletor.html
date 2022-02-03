@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/faviconluk4x.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Attribute selector</title>
+    <style>
+        body {
+            font-family: 'KoHo', sans-serif;
+        }
+
+        [rel="external"] {
+            color: chartreuse;
+            letter-spacing: 5px;
+            font-variant: small-caps;
+        }
+
+        .xyzZ[rel="next"] {
+            color: #e01818;
+            word-spacing: 10px;
+            font-variant: small-caps;
+        }
+    </style>
+</head>
+<body>
+    <a href="acbd.com" rel="external">abcd</a>
+    <br><br>
+    <a class="xyzZ" href="xyz.com" rel="next">xyz Z</a>
+</body>
+</html>
