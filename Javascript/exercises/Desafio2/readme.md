@@ -1,0 +1,1 @@
+Dependency: npm install prompt-sync.
