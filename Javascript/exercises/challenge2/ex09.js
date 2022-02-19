@@ -11,7 +11,7 @@ for(let i=0;i<4;i++) {
 let evenNums = 0
 
 for(let num of nums) {
-    if (num%2 == 0) {
+    if (num%2 === 0) {
         evenNums++
     }
 }
