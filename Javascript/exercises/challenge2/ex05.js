@@ -2,7 +2,7 @@
 // { nome: "" idade:"" sexo:"" profissão: "" nacionalidade:"" }
 // Ao rodar o programa, deve imprimir se a pessoa é aprovada ou não no processo ,a pessoa deve ser maior de idade e brasileira para ser aprovada.
 
-const prompt = require("prompt-sync")()
+const prompt = require('prompt-sync')()
 
 // building the objects
 let user = {
