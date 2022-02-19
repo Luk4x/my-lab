@@ -5,6 +5,7 @@ const prompt = require("prompt-sync")()
 const num1 = prompt('Enter a number: ')
 const num2 = prompt('Enter another number: ')
 const num3 = prompt('Enter another number: ')
+console.log()
 
 if(num1 > num2 && num1 > num3) {
     if(num2 > num3) {
