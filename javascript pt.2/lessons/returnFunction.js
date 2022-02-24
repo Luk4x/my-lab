@@ -6,7 +6,7 @@ let num2 = parseInt(prompt('Enter another number: '))
 let result = sum(num1, num2)
 console.log(`\nThe sum between ${num1} and ${num2} is ${result}`)
 
-function sum(n1, n2) {
+function sum(n1, n2) { // declaration function
     let result = n1+n2
     return result
 }
