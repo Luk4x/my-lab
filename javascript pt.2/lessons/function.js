@@ -3,7 +3,7 @@ let currentAnimes = {
     secound: 'Aho Girl'
 }
 
-function showCurrentAnimes() {
+function showCurrentAnimes() { // void function (no return)
     console.log(currentAnimes.first)
     console.log(currentAnimes.secound)
 }
