@@ -8,31 +8,59 @@
 */
 
 // initial declarations
-const prompt = require('prompt-sync')()
-let population = []
+const prompt = require('prompt-sync')();
+let population = [];
 
 // registering people
-let question = ''
-let i = 0
+const research = function () {
+    let question = '';
+    let i = 0;
 
-do {
-    console.log('\n===========================================')
-    i++
-    console.log(`                Inhabitant ${i}\n`)
-    let name = prompt(`Enter a name to him: `)
-    let salary = parseInt(prompt(`Enter a salary to ${name}: R$`))
-    let childrenAmount = parseInt(prompt(`Enter how many childrens ${name} has: `))
+    do {
+        console.log('\n==================================================');
+        i++;
+        console.log(`                   Inhabitant ${i}\n`);
+        let name = prompt(`Enter a name to him: `);
+        let salary = parseInt(prompt(`Enter a salary to ${name}: R$`));
+        let childrenAmount = parseInt(prompt(`Enter how many children ${name} has: `));
 
-    population.push({
-        name: name,
-        salary: salary,
-        childrenAmount: childrenAmount
-    })
+        population.push({
+            name: name,
+            salary: salary,
+            childrenAmount: childrenAmount
+        });
 
-    console.log('')
-    question = prompt('Wanna register more inhabitants [y/n]? ')
-} while(question!='n')
+        console.log();
+        question = prompt('Wanna register more inhabitants [y/n]? ');
+    } while (question != 'n');
+};
+research();
 
-// showing population
-console.log('\n-------------------------------------------\n')
-console.log(population)
+// showing population array (research data)
+console.log('\n--------------------------------------------------\n');
+console.log(population);
+console.log('\n--------------------------------------------------');
+
+// processing research data
+const researchResult = array => {
+    let averageSalary = 0;
+    let averageChildrenAmount = 0;
+    let higherSalary = 0;
+    let nameHigherSalary = '';
+    for (person of array) {
+        averageSalary += person.salary;
+        averageChildrenAmount += person.childrenAmount;
+        if (person.salary > higherSalary) {
+            higherSalary = person.salary;
+            nameHigherSalary = person.name;
+        }
+    }
+    averageSalary /= array.length;
+    averageChildrenAmount = Math.floor(averageChildrenAmount / array.length);
+    console.log(`                     Results\n`);
+    console.log(`The average Wage is: ${averageSalary.toFixed(2)}`);
+    console.log(`The average children amount is: ${averageChildrenAmount}`);
+    console.log(`${nameHigherSalary} has the highest salary of: ${higherSalary}`);
+    console.log('\n--------------------------------------------------\n');
+};
+researchResult(population);
