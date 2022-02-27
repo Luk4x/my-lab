@@ -1,66 +1,66 @@
 // [ ] Escreva um programa onde, você chame uma função, e ela diga que ano estamos!
 
 const getYear = () => {
-    let year = new Date().getFullYear()
-    const getFormattedMonth = function() {
-        let month = new Date().getMonth()
+    let year = new Date().getFullYear();
+    const getFormattedMonth = function () {
+        let month = new Date().getMonth();
 
-        switch(month) {
+        switch (month) {
             case 0:
-                return 'January'
-            break
+                return 'January';
+                break;
 
             case 1:
-                return 'February'
-            break
+                return 'February';
+                break;
 
             case 2:
-                return 'March'
-            break
+                return 'March';
+                break;
 
             case 3:
-                return 'April'
-            break
+                return 'April';
+                break;
 
             case 4:
-                return 'May'
-            break
-            
+                return 'May';
+                break;
+
             case 5:
-                return 'June'
-            break
+                return 'June';
+                break;
 
             case 6:
-                return 'July'
-            break
+                return 'July';
+                break;
 
             case 7:
-                return 'August'
-            break
+                return 'August';
+                break;
 
             case 8:
-                return 'September'
-            break
+                return 'September';
+                break;
 
             case 9:
-                return 'October'
-            break
+                return 'October';
+                break;
 
             case 10:
-                return 'November'
-            break
+                return 'November';
+                break;
 
             case 11:
-                return 'December'
-            break
+                return 'December';
+                break;
 
             default:
-                return '<Error>'
-            break
+                return '<Error>';
+                break;
         }
-    }
+    };
 
-    return `${getFormattedMonth()}, ${year}`
-}
+    return `${getFormattedMonth()}, ${year}`;
+};
 
-console.log(`We are in ${getYear()}`)
+console.log(`We are in ${getYear()}`);

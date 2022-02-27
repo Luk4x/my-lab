@@ -1,10 +1,10 @@
 /*
 [ ] A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número de filhos. A prefeitura deseja saber:
-- média do salário da população;
-- média do número de filhos;
-- maior salário;
-- O final da leitura de dados se dará com a entrada de um salário negativo.
-- Faça isso usando uma função!
+    - média do salário da população;
+    - média do número de filhos;
+    - maior salário;
+    - O final da leitura de dados se dará com a entrada de um salário negativo.
+    - Faça isso usando uma função!
 */
 
 // initial declarations
@@ -17,9 +17,10 @@ const research = function () {
     let i = 0;
 
     do {
-        console.log('\n==================================================');
+        console.log('\n=======================================================');
         i++;
-        console.log(`                   Inhabitant ${i}\n`);
+
+        console.log(`\n                      Inhabitant ${i}\n`);
         let name = prompt(`Enter a name to him: `);
         let salary = parseInt(prompt(`Enter a salary to ${name}: R$`));
         let childrenAmount = parseInt(prompt(`Enter how many children ${name} has: `));
@@ -37,9 +38,9 @@ const research = function () {
 research();
 
 // showing population array (research data)
-console.log('\n--------------------------------------------------\n');
+console.log('\n-------------------------------------------------------\n');
 console.log(population);
-console.log('\n--------------------------------------------------');
+console.log('\n-------------------------------------------------------');
 
 // processing research data
 const researchResult = array => {
@@ -47,6 +48,7 @@ const researchResult = array => {
     let averageChildrenAmount = 0;
     let higherSalary = 0;
     let nameHigherSalary = '';
+
     for (person of array) {
         averageSalary += person.salary;
         averageChildrenAmount += person.childrenAmount;
@@ -55,12 +57,14 @@ const researchResult = array => {
             nameHigherSalary = person.name;
         }
     }
+
     averageSalary /= array.length;
-    averageChildrenAmount = Math.floor(averageChildrenAmount / array.length);
-    console.log(`                     Results\n`);
-    console.log(`The average Wage is: ${averageSalary.toFixed(2)}`);
-    console.log(`The average children amount is: ${averageChildrenAmount}`);
-    console.log(`${nameHigherSalary} has the highest salary of: ${higherSalary}`);
-    console.log('\n--------------------------------------------------\n');
+    averageChildrenAmount = Math.round(averageChildrenAmount / array.length);
+
+    console.log(`\n                   -Research Results-\n`);
+    console.log(`The average Wage is: R$${averageSalary.toFixed(2)}.`);
+    console.log(`The average children amount is: ${averageChildrenAmount}.`);
+    console.log(`${nameHigherSalary} has the highest salary of: R$${higherSalary.toFixed(2)}.`);
+    console.log('\n-------------------------------------------------------\n');
 };
 researchResult(population);

@@ -1,49 +1,49 @@
-// [ ] Escreva um programa onde, você chame uma função, e ela diga a hora exata! 
+// [ ] Escreva um programa onde, você chame uma função, e ela diga a hora exata!
 
-const getCurrentTime = function() {
+const getCurrentTime = function () {
     const getFormattedWeekDay = () => {
-        let weekDay = new Date().getDay()
+        let weekDay = new Date().getDay();
 
-        switch(weekDay) {
+        switch (weekDay) {
             case 0:
-                return 'Sunday'
-            break
+                return 'Sunday';
+                break;
 
             case 1:
-                return 'Monday'
-            break
+                return 'Monday';
+                break;
 
             case 2:
-                return 'Tuesday'
-            break
+                return 'Tuesday';
+                break;
 
             case 3:
-                return 'Wednesday'
-            break
+                return 'Wednesday';
+                break;
 
             case 4:
-                return 'Thirsday'
-            break
+                return 'Thursday';
+                break;
 
             case 5:
-                return 'Friday'
-            break
+                return 'Friday';
+                break;
 
             case 6:
-                return 'Saturday'
-            break
+                return 'Saturday';
+                break;
 
             default:
-                return '<Error>'
-            break
+                return '<Error>';
+                break;
         }
-    }
-    let hours = new Date().getHours()
-    let minutes = new Date().getMinutes()
-    let seconds = new Date().getSeconds()
-    let ms = new Date().getMilliseconds()
-    
-    return `Today is ${getFormattedWeekDay()} and now it's ${hours}:${minutes}:${seconds}:${ms} o'clock.`
-}
+    };
+    let hours = new Date().getHours();
+    let minutes = new Date().getMinutes();
+    let seconds = new Date().getSeconds();
+    let ms = new Date().getMilliseconds();
 
-console.log(getCurrentTime())
+    return `Today is ${getFormattedWeekDay()} and now it's ${hours}:${minutes}:${seconds}:${ms} o'clock.`;
+};
+
+console.log(getCurrentTime());
