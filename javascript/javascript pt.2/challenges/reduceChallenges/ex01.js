@@ -9,13 +9,40 @@ const companies = [
     { name: 'Apple', marketValue: 845, CEO: 'Tim Cook', foundedOn: 1976 }
 ];
 
-// getting marketValue total value
-const totalMarketValue = companies.reduce((total, company) => {
-    total += company.marketValue;
-    return total;
+// getting marketValue sum
+const marketValueSum = companies.reduce((sum, company) => {
+    sum += company.marketValue;
+    return sum;
 }, 0);
-console.log(totalMarketValue);
+console.log(marketValueSum);
+console.log();
 
-// getting all companies that was founded after 1960
+// getting all companies that was founded after 1970 (it's possible to do with reduce, but it's clearly a filter situation, mainly because the return is an array.)
+const companiesFoundedAfter1970 = companies.reduce((validCompanies, company) => {
+    if (company.foundedOn > 1970) validCompanies.push(company);
+    return validCompanies;
+}, []);
 
-// separate companies name by marketValue (<100, <200, <300)
+// const companiesFoundedAfter1970 = companies.filter(company => {
+//     if (company.foundedOn > 1970) return true;
+// });
+// console.log(companiesFoundedAfter1970);
+
+console.log(companiesFoundedAfter1970);
+console.log();
+
+// separate companies that has marketValue less than 300 and higher than 300 by name (that's a great exercise to show a reduce situation. I organized the array elements into coherent properties of an object to meet demand.)
+const companiesNameByMarketValue = companies.reduce((companies, company) => {
+    if (companies['marketValue<300'] == null) companies['marketValue<300'] = [];
+    if (companies['marketValue>300'] == null) companies['marketValue>300'] = [];
+
+    if (company.marketValue < 300) {
+        companies['marketValue<300'].push(company.name);
+    } else {
+        companies['marketValue>300'].push(company.name);
+    }
+
+    return companies;
+}, {});
+console.log(companiesNameByMarketValue);
+console.log();
