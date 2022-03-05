@@ -61,3 +61,11 @@ const charactersNameByGender = characters.reduce((separated, character) => {
 }, {});
 console.log(charactersNameByGender);
 console.log();
+
+// getting total number of characters in all characters name
+const charactersNameLength = characters.reduce((charactersNameLength, character) => {
+    charactersNameLength[character.name] = character.name.length - 1; // -1 -> removing space
+    return charactersNameLength;
+}, {});
+console.log(charactersNameLength);
+console.log();
