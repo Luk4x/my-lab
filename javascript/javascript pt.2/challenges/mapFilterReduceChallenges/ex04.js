@@ -1,9 +1,23 @@
+// fatorial
 console.log();
 
 const prompt = require('prompt-sync')();
 
-const userNum = prompt('Enter a number: ');
+const userNum = parseInt(prompt('Enter a number: '));
+console.log();
 
-userNum.reduce(total, number => {}, 0);
+// creating and felling an array based on userNum
+const userNumArray = [];
+for (i = 0; i < userNum; i++) {
+    userNumArray.push(userNum - i);
+}
+console.log(`array created: ${userNumArray}.`);
+console.log();
 
-// https://crocoder.dev/blog/map-filter-reduce-exercises/
+// calculating fatorial based on array
+const fatorial = userNumArray.reduce((fatorial, number) => {
+    fatorial *= number;
+    return fatorial;
+});
+console.log(`fatorial de ${userNum} = ${fatorial}.`);
+console.log();
