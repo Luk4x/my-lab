@@ -10,7 +10,7 @@ const companies = [
 ];
 
 // getting all companies that was founded after 1970 (it's possible to do with reduce, but it's clearly a filter situation, mainly because the return is an array).
-// basically: if you want to return an array with a number of items different from the original, use the .filter().
+// basically: if you want to return a new array with only the items that meet a certain condition, ie filter, use .filter();
 const companiesFoundedAfter1970 = companies.reduce((validCompanies, company) => {
     if (company.foundedOn > 1970) validCompanies.push(company);
     return validCompanies;
@@ -25,7 +25,7 @@ console.log(companiesFoundedAfter1970);
 console.log();
 
 // updating all marketValues by +10. (it's possible, but it's clearly a map situation, mainly because the return has the same amount of items in the array).
-// basically: if you want to return an array with the same number of items as the original, use .map().
+// basically: if you want to return an array with the same number of items as the original, use .map();
 const companiesMarketValuePlus10 = companies.reduce((marketValuePlus10, company) => {
     marketValuePlus10.push(company.marketValue + 10);
     return marketValuePlus10;
@@ -39,7 +39,7 @@ console.log(companiesMarketValuePlus10);
 console.log();
 
 // separate companies that has marketValue less than 300 and higher than 300 by name (that's a great exercise to show a reduce situation. I organized the array elements into coherent properties of an object to meet demand).
-// basically: if you want to return a different data type other than array, use .reduce().
+// basically: if you want to return a different data type other than array/reduce the array to a result, that is, make a more abrupt transformation, use .reduce();
 const companiesNameByMarketValue = companies.reduce((companies, company) => {
     if (companies['marketValue<300'] == null) companies['marketValue<300'] = [];
     if (companies['marketValue>300'] == null) companies['marketValue>300'] = [];
