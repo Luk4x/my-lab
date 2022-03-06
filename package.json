@@ -1,5 +1,33 @@
 {
-  "dependencies": {
-    "prompt-sync": "^4.2.0"
-  }
+    "name": "devclub-pratica-geral",
+    "version": "1.0.0",
+    "description": "DevClub general lessons practice and exercises.",
+    "main": "index.js",
+    "dependencies": {
+        "prompt-sync": "^4.2.0",
+        "strip-ansi": "^5.2.0",
+        "ansi-regex": "^4.1.0"
+    },
+    "devDependencies": {
+        "prompt-sync": "^4.2.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Luk4x/DevClub-pratica-geral.git"
+    },
+    "keywords": [
+        "html;",
+        "css;",
+        "javascript;",
+        "node;"
+    ],
+    "author": "Lucas Maciel (Luk4x)",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Luk4x/DevClub-pratica-geral/issues"
+    },
+    "homepage": "https://github.com/Luk4x/DevClub-pratica-geral#readme"
 }
