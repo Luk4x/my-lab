@@ -41,3 +41,10 @@ console.log(allParagraphs2);
 const title3 = document.querySelectorAll('#title'); // obligatory returns a NodeList
 console.log(title3);
 console.log('');
+
+// about getElementsByName() method:
+const input = document.getElementsByName('input1'); // obligatory returns a NodeList
+console.log(input);
+const allParagraphs3 = document.getElementsByName('paragraph');
+console.log(allParagraphs3);
+console.log('');
