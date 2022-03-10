@@ -72,6 +72,9 @@ input[0].disabled = true;
 allParagraphs2[0].textContent = 'Blend S';
 allParagraphs2[1].innerHTML = '<abbr title="that one is really good">Seitokai Yakuindomo</abbr>'; // accept html tags inside
 allParagraphs2[2].innerText = 'Non Non Biyori';
+allParagraphs2.forEach(p => {
+    p.style.cursor = 'pointer';
+});
 
 // getting attributes from elements:
 console.log(input[0].attributes); // .attributes to see all list
@@ -86,15 +89,31 @@ console.log(title.style.color);
 console.log('');
 
 // events: (list: https://www.w3schools.com/tags/ref_eventattributes.asp)
+// connected via HTML document (changing title color to red)
 const changeTitleColor = () => {
     title.style.color = 'red';
 };
 
-// set default title color
-// calling function via JS (directly)
+// connecting HTML events via JS (directly) (changing title color to default)
 title.onmouseout = eventParameters => {
-    // every event has a list of parameters
+    // every event has it's own parameter list
     console.log(eventParameters);
     console.log(eventParameters.target);
     title.style.color = 'lightGray';
 };
+
+// connecting HTML events via JS (eventListener) (Mark an anime as watched)
+const defaultP = ['Blend S', '<abbr title="that one is really good">Seitokai Yakuindomo</abbr>', 'Non Non Biyori'];
+
+allParagraphs2.forEach((p, i) => {
+    p.addEventListener('click', () => {
+        console.log(p.style.color);
+        if (p.style.color === 'lightGreen' || p.style.color === 'lightgreen') {
+            p.style.color = 'gray';
+            p.innerHTML = defaultP[i];
+        } else {
+            p.style.color = 'lightGreen';
+            p.innerHTML = p.textContent + ' - Watched &#x2714;';
+        }
+    });
+});
