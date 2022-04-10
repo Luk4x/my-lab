@@ -1,7 +1,0 @@
-1. introdução ao http: https://canaltech.com.br/internet/o-que-e-http/
-
-2. request, forma do cliente se comunicar com o servidor:
-2.1 métodos http: https://www.dio.me/articles/aprenda-os-metodos-http
-2.2 parâmetros http: https://blog.rocketseat.com.br/tipos-de-parametros-nas-requisicoes-rest/
-
-3. response, forma do servidor responder à requisição do cliente + recaptulação: https://www.treinaweb.com.br/blog/o-que-e-http-request-get-post-response-200-404
