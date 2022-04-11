@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Luk4x/DevClub-pratica-geral/issues"
   },
-  "homepage": "https://github.com/Luk4x/DevClub-pratica-geral#readme"
+  "homepage": "https://github.com/Luk4x/DevClub-pratica-geral#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
