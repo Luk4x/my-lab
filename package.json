@@ -4,9 +4,10 @@
     "description": "DevClub general lessons practice and exercises.",
     "main": "index.js",
     "dependencies": {
+        "ansi-regex": "^4.1.0",
+        "node-fetch": "^3.2.4",
         "prompt-sync": "^4.2.0",
-        "strip-ansi": "^5.2.0",
-        "ansi-regex": "^4.1.0"
+        "strip-ansi": "^5.2.0"
     },
     "devDependencies": {
         "prompt-sync": "^4.2.0"
@@ -26,6 +27,7 @@
     ],
     "author": "Lucas Maciel (Luk4x)",
     "license": "ISC",
+    "type": "module",
     "bugs": {
         "url": "https://github.com/Luk4x/DevClub-pratica-geral/issues"
     },
