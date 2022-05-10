@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flex Model</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: black;
+            }
+
+            h1 {
+                text-align: center;
+                color: white;
+                margin: 10px;
+            }
+
+            .container {
+                border: 1px solid white;
+                max-width: 98vw;
+                height: 85vh;
+                margin: auto;
+                display: flex;
+                flex-flow: row-reverse wrap; /* flex-direction + flex-wrap */
+                justify-content: center;
+                align-items: center;
+            }
+
+            .item {
+                width: 80px;
+                height: 80px;
+                border: 1px solid indigo;
+                background: darkviolet;
+                text-align: center;
+                padding-top: 20px;
+                margin: 5px;
+            }
+
+            @media screen and (max-width: 470px) {
+                .container {
+                    align-content: center; /* need large height or width, and flex wrap on. */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Flex Model</h1>
+
+        <div class="container">
+            <div class="item">i1</div>
+            <div class="item">i2</div>
+            <div class="item">i3</div>
+            <div class="item">i4</div>
+            <div class="item">i5</div>
+        </div>
+    </body>
+</html>
