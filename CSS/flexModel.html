@@ -22,29 +22,63 @@
                 margin: 10px;
             }
 
-            .container {
+            .flex-container {
+                padding: 20px;
                 border: 1px solid white;
                 max-width: 98vw;
                 height: 85vh;
                 margin: auto;
                 display: flex;
-                flex-flow: row-reverse wrap; /* flex-direction + flex-wrap */
+                flex-flow: row wrap; /* flex-direction + flex-wrap (if wrap, flex-shrink is affected)*/
                 justify-content: center;
                 align-items: center;
+                gap: 20px;
             }
 
-            .item {
-                width: 80px;
+            .flex-item {
+                flex-basis: 80px;
+                /* flex-grow: 1; intelligent grow */
+                /* flex: 80px 1 1; shorthand */
                 height: 80px;
                 border: 1px solid indigo;
                 background: darkviolet;
                 text-align: center;
-                padding-top: 20px;
-                margin: 5px;
+                padding-top: 30px;
             }
 
-            @media screen and (max-width: 470px) {
-                .container {
+            #i1 {
+                flex-grow: 1;
+                flex-shrink: 1;
+                order: 1;
+            }
+
+            #i2 {
+                flex-grow: 2;
+                flex-shrink: 2;
+                order: 4;
+            }
+
+            #i3 {
+                flex-grow: 3;
+                flex-shrink: 3;
+                order: 3;
+                align-self: flex-start;
+            }
+
+            #i4 {
+                flex-grow: 4;
+                flex-shrink: 4;
+                order: 2;
+            }
+
+            #i5 {
+                flex-grow: 5;
+                flex-shrink: 5;
+                order: 5;
+            }
+
+            @media screen and (max-width: 500px) {
+                .flex-container {
                     align-content: center; /* need large height or width, and flex wrap on. */
                 }
             }
@@ -53,12 +87,12 @@
     <body>
         <h1>Flex Model</h1>
 
-        <div class="container">
-            <div class="item">i1</div>
-            <div class="item">i2</div>
-            <div class="item">i3</div>
-            <div class="item">i4</div>
-            <div class="item">i5</div>
+        <div class="flex-container">
+            <div class="flex-item" id="i1">i1</div>
+            <div class="flex-item" id="i2">i2</div>
+            <div class="flex-item" id="i3">i3</div>
+            <div class="flex-item" id="i4">i4</div>
+            <div class="flex-item" id="i5">i5</div>
         </div>
     </body>
 </html>
