@@ -21,9 +21,8 @@ myPromise
         console.log('end.');
     });
 
-// consuming a external promise (a API that return a promise)
-
 /*
+// creating a promise
 const myPromise = new Promise((resolve, reject) => {
     const name = 'Luk4x';
 
@@ -31,6 +30,7 @@ const myPromise = new Promise((resolve, reject) => {
     else reject('Wrong name.');
 });
 
+// consuming my owm promise
 myPromise
     .then(promiseReturn => {
         // resolve return
