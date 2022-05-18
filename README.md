@@ -1,7 +1,7 @@
-# DevClub
+# My lab of tests and practices
 
 ## about
-DevClub General Practices Repository.
+Repository for general practices that I do to exercise new concepts, technologies...
 
 ## 🤝 Contributors Linkedin
 <table>
