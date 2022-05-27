@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grid In Practice 1</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background: #303030;
+                color: whitesmoke;
+                font-size: 24px;
+                width: 100vw;
+                height: 100vh;
+                padding: 10px;
+            }
+
+            .container {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 1fr 3fr 1fr;
+                grid-template-rows: 1fr 3fr 1fr;
+                grid-gap: 5px;
+            }
+
+            header {
+                background: #ffbe0b;
+                border: 1px solid black;
+                grid-column: 1/4;
+            }
+
+            nav {
+                background: #fb5607;
+                border: 1px solid black;
+            }
+
+            main {
+                background: #ff006e;
+                border: 1px solid black;
+            }
+
+            aside {
+                background: #8338ec;
+                border: 1px solid black;
+            }
+
+            footer {
+                background: #3a86ff;
+                border: 1px solid black;
+                grid-column: 1/4;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>header</header>
+            <nav>nav</nav>
+            <main>main</main>
+            <aside>aside</aside>
+            <footer>footer</footer>
+        </div>
+    </body>
+</html>
