@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grid Template Shorthand</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background: #303030;
+                color: whitesmoke;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .container {
+                background: #202020;
+                padding: 10px;
+                color: black;
+                width: 90%;
+                height: 90%;
+                display: grid;
+                justify-content: center;
+                align-content: center;
+                gap: 10px 40px;
+                border: 1px solid gainsboro;
+
+                /*                 
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(3, 1.4fr) 5fr 0.8fr; 
+                    grid-template-areas:
+                        'logo logo logo'
+                        'header header header'
+                        'main main main'
+                        'aside1 aside2 aside3'
+                        'footer footer footer';
+                */
+
+                /*                                           row / column                         */
+                /*                 
+                    grid-template: repeat(3, 1.4fr) 5fr 0.8fr / repeat(3, 1fr);
+                    grid-template-areas:
+                        'logo logo logo'
+                        'header header header'
+                        'main main main'
+                        'aside1 aside2 aside3'
+                        'footer footer footer';
+                */
+
+                grid-template:
+                    'logo logo logo' 1.4fr /* row */
+                    'header header header' 1.4fr /* row */
+                    'main main main' 1.4fr /* row */
+                    'aside1 aside2 aside3' 5fr /* row */
+                    'footer footer footer' 0.8fr /* row */
+                    / 1fr 1fr 1fr /* column */;
+            }
+
+            .logo {
+                background: #74d3ae;
+                grid-area: logo;
+            }
+
+            header {
+                background: #678d58;
+                grid-area: header;
+            }
+
+            main {
+                background: #a6c48a;
+                grid-area: main;
+            }
+
+            #aside1 {
+                background: #f6e7cb;
+                grid-area: aside1;
+            }
+
+            #aside2 {
+                background: #dd9787;
+                grid-area: aside2;
+            }
+
+            #aside3 {
+                background: #01baef;
+                grid-area: aside3;
+            }
+
+            footer {
+                background: #2b3a66;
+                grid-area: footer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Grid Template</h1>
+        <div class="container">
+            <div class="logo">logo / navigation</div>
+            <header>header/banner</header>
+            <main>text info area</main>
+            <aside id="aside1">box1</aside>
+            <aside id="aside2">box2</aside>
+            <aside id="aside3">box3</aside>
+            <footer>footer</footer>
+        </div>
+    </body>
+</html>

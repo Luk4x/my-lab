@@ -117,3 +117,14 @@ allParagraphs2.forEach((p, i) => {
         }
     });
 });
+
+// others practices
+console.log('%c Objects in console:', 'color: cyan; font-weight:bolder; font-size: 12px;'); // use css in console to highlight
+const ex1 = { name: 'x', id: 24 };
+const ex2 = { name: 'y', id: 9 };
+const ex3 = { name: 'z', id: 65 };
+
+// cool ways to show objects in console
+console.log({ ex1, ex2, ex3 });
+console.table([ex1, ex2, ex3]);
+console.log();
